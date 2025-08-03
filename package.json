@@ -53,8 +53,8 @@
     },
     "scripts": {
         "build": "rimraf dist && tsc && npm run copy-data && npm run build-modules && npm run pack",
-        "copy-data": "cp -r src/data/*.js dist/data/",
-        "build-modules": "cp -r src/data/*.module.js dist/data/",
+        "copy-data": "cpx src/data/*.js dist/data/",
+        "build-modules": "cpx src/data/*.module.js dist/data/",
         "pack": "rollup -c",
         "analyze": "rollup -c --environment ANALYZE:true",
         "tree-shaking-test": "rollup examples/tree-shaking.js -f esm -o dist/tree-shaking-example.js",
@@ -86,6 +86,7 @@
     "devDependencies": {
         "@rollup/plugin-terser": "^0.4.4",
         "chai": "^5.2.1",
+        "cpx": "^1.5.0",
         "eslint": "^9.32.0",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-prettier": "^5.5.3",
