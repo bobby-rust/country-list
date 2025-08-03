@@ -7,12 +7,12 @@
         "url": "https://github.com/Sonatrix/country-list/issues"
     },
     "type": "module",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
+    "main": "dist/country-data-list.udm.js",
+    "module": "dist/country-data-list.esm.js",
     "browser": "dist/country-data-list.min.js",
     "exports": {
         ".": {
-            "import": "./dist/index.js",
+            "import": "./dist/country-data-list.esm.js",
             "require": "./dist/country-data-list.umd.js",
             "types": "./dist/index.d.ts"
         },
