@@ -52,7 +52,7 @@
         }
     },
     "scripts": {
-        "build": "rm -rf dist && tsc && npm run copy-data && npm run build-modules && npm run pack",
+        "build": "rimraf dist && tsc && npm run copy-data && npm run build-modules && npm run pack",
         "copy-data": "cp -r src/data/*.js dist/data/",
         "build-modules": "cp -r src/data/*.module.js dist/data/",
         "pack": "rollup -c",
@@ -84,6 +84,7 @@
     "author": "Sonatrix",
     "license": "MIT",
     "devDependencies": {
+        "@rollup/plugin-terser": "^0.4.4",
         "chai": "^5.2.1",
         "eslint": "^9.32.0",
         "eslint-config-prettier": "^10.1.8",
@@ -92,8 +93,8 @@
         "lint-staged": "^16.1.2",
         "mocha": "^11.7.1",
         "prettier": "^3.6.2",
+        "rimraf": "^6.0.1",
         "rollup": "^4.46.2",
-        "@rollup/plugin-terser": "^0.4.4",
         "typescript": "^5.9.2"
     }
 }
